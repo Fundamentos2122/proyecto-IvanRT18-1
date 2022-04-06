@@ -1,0 +1,120 @@
+.btn{
+    display: inline-block;
+    text-align: center;
+    padding: 0.25em 0.75em;
+    font-size: 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25em;
+    text-decoration: none;
+    transition: color 0.50s ease, background-color 0.50s ease;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn-primary{
+    color: #ffff;
+    background-color: var(--color-primary);
+}
+
+.btn-primary:hover{
+    color: #ffff;
+    background-color: var(--color-primary-darked);
+}
+
+.btn-submit{
+    margin: 1em auto;
+    font-size: 1.5em;
+    width: 60%;
+    height: 2em;
+    border: 0;
+    border-radius: 25px;
+    background-color: var(--color-primary);
+    color: white;
+    transition: color 0.50s ease, background-color 0.50s ease;
+}
+
+.btn-submit:hover{
+    background-color: var(--color-primary-darked);
+    cursor: pointer;
+}
+
+.btn-secondary{
+    color: #ffff;
+    background-color: var(--color-secondary);
+}
+
+.btn-secondary:hover{
+    color: #ffff;
+    background-color: var(--color-secondary-darked);
+}
+
+.btn-success{
+    color: #ffff;
+    background-color: var(--color-success);
+}
+
+.btn-success:hover{
+    color: #ffff;
+    background-color: var(--color-success-darked);
+}
+
+.btn-info{
+    color: #ffff;
+    background-color: var(--color-info);
+}
+
+.btn-info:hover{
+    color: #ffff;
+    background-color: var(--color-info-darked);
+}
+
+.btn-warning{
+    color: #222;
+    background-color: var(--color-warning);
+}
+
+.btn-warning:hover{
+    color: #fff;
+    background-color: var(--color-warning-darked);
+}
+
+.btn-danger{
+    color: #ffff;
+    background-color: var(--color-danger);
+}
+
+.btn-danger:hover{
+    color: #ffff;
+    background-color: var(--color-danger-darked);
+}
+
+.btn-light{
+    color: #222;
+    background-color: var(--color-light);
+}
+
+.btn-light:hover{
+    color: #222;
+    background-color: var(--color-light-darked);
+}
+
+.btn-dark{
+    color: #ffff;
+    background-color: var(--color-dark);
+}
+
+.btn-dark:hover{
+    color: #ffff;
+    background-color: var(--color-dark-darked);
+}
+
+
+.border-light{
+    border-color: var(--color-light);
+}
+
+.border-dark{
+    border-color: var(--color-dark);
+}
