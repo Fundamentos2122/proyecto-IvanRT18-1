@@ -33,23 +33,26 @@
             </nav>
         </div>
     </header>
+
     <div class="container-xl">
-      <div class="container-agenda">
-        <h1>Agenda tu cita</h1>
-        <div>
-          <h2>Importante</h2>
-          <p>Requieres de una cuenta para poder agendar una cita.</p>
-        </div>
+      <section id="agenda-cita-username">
+        <div class="row">
+          <h1>Agenda tu cita</h1>
+          <h2>Agendando cita para: username</h2>
   
-        <div>
-          <div class="opciones-agenda">
-            <p>¿Ya eres cliente? <span><a href="../html/iniciarSesion.html">Inicia Sesión</a></span></p>
-          </div>
-          <div class="opciones-agenda">
-            <p>¿Aún no tienes cuenta? <span><a href="../html/registrate.html">Crea una</a></span></p>
-          </div>
+          <form action="" class="container-form">
+            <div>
+              <label for="dia-cita">Día:</label>
+              <input type="date" name="dia-cita" id="">
+            </div>
+            <div>
+              <label for="hora-cita">Hora:</label>
+              <input type="time" name="hora-cita" id="">
+            </div>
+            <button type="submit" class="btn-submit">Agendar Cita</button>
+          </form>
         </div>
-      </div>
+      </section>
     </div>
 
 </body>
