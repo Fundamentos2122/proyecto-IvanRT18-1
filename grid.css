@@ -35,7 +35,7 @@
 }
 
 .row{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     flex-wrap: wrap; /*Cuando nos pasamos hace un salto de renglon, evitando scroll horizontal*/
     /* margin: 0 calc(var(--container-padding) * -1); */
