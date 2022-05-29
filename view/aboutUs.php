@@ -5,45 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Body Balance | Sobre nosotros</title>
+    <title>Sobre nosotros | Body Balance</title>
     <link rel="stylesheet" href="framework.css">
 </head>
 
 <body>
     <header>
-        <div class="container-menu">
-            <div id="container-logo">
-                <img src="logo.png" alt="logo pagina">
-                <span class="color-black">Body Balance</span>
-            </div>
-
-            <div class="menu-btns">
-                <button class="btn btn-primary"><a href="iniciarSesion.html">Iniciar sesión</a></button>
-                <button class="btn btn-secondary">
-                    <a href="html/registrate.html">Regístrarse</a>
-                </button>
-            </div>
-
-            <nav class="menu-nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="agenda-cita-guest username.html">Agenda hoy</a></li>
-                    <li><a href="aboutUs.html">Sobre nosotros</a></li>
-                    <li><a href="Blog.html">Noticias</a></li>
-                    <li><a href="contact-us.html">Contactanos</a></li>
-                    <li><a href="perfil.html">Perfil</a></li>
-                </ul>
-            </nav>
-        </div>
+        <?php include('templates/header.php') ?>
     </header>
 
     <section id="about-us-1">
         <div class="container-xl">
             <div class="row">
-                <img src="logo.png" alt="" width="250px">
+                <img src="img/logo.png" alt="" width="250px">
             </div>
             <div class="row">
-                <h1>Sobre nosotros</h1>
+                <h1 class="titulo-verde">Sobre nosotros</h1>
             </div>
             <div class="row align-center padding-general">
                 <div class="col-9">
@@ -68,7 +45,7 @@
                         tus objetivos.
                     </p>
                 </div>
-                <img src="background-food-green.png" alt="" width="300px">
+                <img src="img/background-food-green.png" alt="" width="300px">
             </div>
         </div>
     </section>
@@ -77,12 +54,7 @@
 
 </body>
 <footer id="footer">
-    <img src="logo.png" alt="" width="50px">
-    <p>
-        © 2022 Clinica de nutrición Body Balance
-        <a href="#">Aviso Legal</a>
-        <a href="#">Terminos y condiciones</a>
-    </p>
+    <?php include('templates/footer.php') ?>
 </footer>
 
 </html>

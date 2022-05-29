@@ -5,9 +5,10 @@
 .container-lg,
 .container-xl{
     width: 100%;
-    padding: 0 var(--container-padding);
+    padding: 0 var(--padding-2);
     margin: 0 auto;
-    background-color: #F8F9F9;
+    /* background-color: var(--container-color); */
+    /* background-image: linear-gradient(to left bottom, #5cedff, #55f0f9, #53f3f1, #56f6e8, #5ef8de, #66fad7, #6efbcf, #78fcc7, #80fdc1, #87fdba, #90feb4, #98fead); */
 }
 
 @media (min-width: 576px) {
@@ -42,9 +43,15 @@
     justify-content: center;
 }
 
+.row-0{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .row > *{
     /* border: black 1px solid; */
 } 
+
 
 .col, .col-auto, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10,.col-11, .col-12
 .col-sm, .col-sm-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10,.col-sm-11, .col-sm-12

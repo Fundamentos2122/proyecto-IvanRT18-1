@@ -1,0 +1,37 @@
+@import url(style.css);
+@import url(grid.css);
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap');
+
+
+:root{
+    --primary-color: #4FFFB0;
+    --primary-color-darked: #00FC89;
+
+    --secondary-color: #0C98FB;
+    --secondary-color-darked: #004f87;
+
+    --third-color: #FF7F4F;
+    --third-color-darked: #FF4500;
+
+    --color-base: #003647;
+
+    --container-color: azure;
+
+    --border-radius: 15px;
+    --border-radius-img: 5px;
+
+    --padding-sm: 0.5em;
+    --padding-1: 1em;
+    --padding-2: 2em;
+    --padding-3: 2.5em;
+    --padding-4: 3em;
+
+
+    --margin-sm: 0.5em;
+    --margin-1: 1em;
+    --margin-2: 2em;
+    --margin-3: 2.5em;
+    --margin-4: 3em;
+}
+
