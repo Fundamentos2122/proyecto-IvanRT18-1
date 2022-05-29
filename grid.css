@@ -91,10 +91,6 @@
     max-width: 50%;
 }
 
-.d-flex{
-    display: flex;
-}
-
 .col-7{
     flex: 0 0 58.3333%;
     max-width: 58.3333%;
