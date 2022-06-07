@@ -14,32 +14,30 @@ catch(PDOException $e) {
 
 if (isset($_POST['agendar_cita-btn'])) {
     // $usuario = new Usuario();
+    session_start();
 
-    $id_cita = 1;
+    $id_user = $_SESSION["id"];
     $dia_cita = $_POST['cita_dia'];
     $hora_cita = $_POST['cita_hora'];
-    $user_cita = 10;
 
     
-
+    // var_dump($id_user);
+    // var_dump($dia_cita);
+    // var_dump($hora_cita);
 
     try {
-        $query = "INSERT INTO citas (dia_cita, hora_cita) VALUES (?, ?)";
-        $statement = $connection->prepare($query);
-        // $statement->bindParam(1, $id_cita);
-        $statement->bindParam(1, $dia_cita);
-        $statement->bindParam(2, $hora_cita);
-        // $statement->bindParam(4, $user_cita);
-        $query_execute = $statement->execute();
+        $query = $connection->prepare("INSERT INTO citas VALUES (NULL, :dia_cita, :hora_cita, :id_user)");
+        $query->bindParam(':dia_cita', $dia_cita, PDO::PARAM_STR);
+        $query->bindParam(':hora_cita', $hora_cita, PDO::PARAM_STR);
+        $query->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+        $query->execute();
 
-        if ($query_execute) {
-            $_SESSION['message'] = "Cita agregada";
-            header('Location: ../view/agenda-cita-username.php');
-            exit(0);
+       
+
+        if ($query->rowCount() === 0) {
+            echo "404: Error en la inserción";
         } else {
-            $_SESSION['message'] = "No se ha agregado la cita";
-            header('Location: ../view/agenda-cita-username.php');
-            exit(0);
+            header('Location: http://localhost/paginawebdb/view/index.php');
         }
     } catch (PDOException $e) {
         echo "El error es: " . $e->getMessage();

@@ -53,10 +53,10 @@ $footer = 'view/layouts/footer.php';
         </div>
 
         <div class="col-sm-12 col-lg-4 flex justify-center align-center">
-          <img src="img/background-food-green.png" alt="">
+          <img src="../assets/img/background-food-green.png" alt="">
         </div>
 
-        <a class="btn btn-agenda">Agendar</a>
+        <a class="btn btn-agenda" href="../view/agenda-cita-username.php">Agendar</a>
       </div>
     </div>
   </section>

@@ -9,3 +9,14 @@ function alerta_Cita() {
 }
 
 
+
+let btn_comentario = document.getElementById('btn_comentario');
+
+btn_comentario.addEventListener('click', alerta_Comentario);
+
+function alerta_Comentario() {
+  alert("Tu comentario se ha registrado correctamentre");
+}
+
+
+

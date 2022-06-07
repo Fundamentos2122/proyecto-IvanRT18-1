@@ -16,34 +16,34 @@ catch(PDOException $e) {
 if (isset($_POST['btn-register-submit'])) {
     // $nuevaCita = new Cita();
 
-    $id = 11;
-    $nombre = $_POST['Reg_name'];
-    $email = $_POST['Reg_email'];
-    $password = $_POST['Reg_password'];
+    $nombre = trim($_POST['Reg_name']);
+    $email = trim($_POST['Reg_email']);
+    $password = trim($_POST['Reg_password']);
+    $password = password_hash($password,PASSWORD_DEFAULT);//Encriptar contraseña
     $tipo = 'user';
-    $id_cita = 11;
+    // $photo = "";
+    
+    // if (sizeof($_FILES) > 0) {
+    //     $tmp_name = $_FILES["photo"]["tmp_name"];
 
+    //     $photo = file_get_contents($tmp_name);
+    // }
 
     try {
-        $query = "INSERT INTO usuarios (id_user, nombre_user, email_user, contraseña_user, tipo_user, id_cita) VALUES (?, ?, ?, ?, ?, ?)";
-        $statement = $connection->prepare($query);
-        $statement->bindParam(1, $id);
-        $statement->bindParam(2, $nombre);
-        $statement->bindParam(3, $email);
-        $statement->bindParam(4, $password);
-        $statement->bindParam(5, $tipo);
-        $statement->bindParam(6, $id_cita);
+        $query = $connection->prepare('INSERT INTO usuarios VALUES (NULL, :nombre_user, :email_user, :password_user, :tipo_user, NULL)');
+        $query->bindParam(':nombre_user', $nombre, PDO::PARAM_STR);
+        $query->bindParam(':email_user', $email, PDO::PARAM_STR);
+        $query->bindParam(':password_user', $password, PDO::PARAM_STR);
+        $query->bindParam(':tipo_user', $tipo, PDO::PARAM_STR);
+        // $query->bindParam(':photo_user', $photo, PDO::PARAM_STR);
 
-        $query_execute = $statement->execute();
+        $query->execute();
 
-        if ($query_execute) {
-            $_SESSION['message'] = "Usuario registrado exitosamente";
-            header('Location: ../view/index.php');
-            exit(0);
-        } else {
-            $_SESSION['message'] = "No se ha podido registrar al usuario";
-            header('Location: ../view/registrate.php');
-            exit(0);
+        if($query->rowCount() === 0) {
+            echo "404: Error en la inserción";
+        }
+        else {
+                header('Location: http://localhost/paginawebdb/view/index.php');
         }
     } catch (PDOException $e) {
         echo "El error es: " . $e->getMessage();
@@ -71,7 +71,7 @@ if (isset($_POST['login_btn'])) {
         $user;
 
         while($row = $query->fetch(PDO::FETCH_ASSOC)) {
-            $user = new Usuario($row["id_user"], $row["nombre_user"], $row["email_user"], $row["contraseña_user"], $row["tipo_user"], $row["id_cita"]);
+        $user = new Usuario($row["id_user"], $row["nombre_user"], $row["email_user"], $row["contraseña_user"], $row["tipo_user"], $row["photo_user"]);
         }
 
 
@@ -93,4 +93,15 @@ if (isset($_POST['login_btn'])) {
     } catch (PDOException $e) {
         echo "El error es: " . $e->getMessage();
     }
+}
+
+//Cerrar Sesión
+if(isset($_POST['Logout_btn'])){
+    session_destroy();
+    var_dump(session_status());
+
+    echo 'Sesion cerrada';
+
+    header('Location: http://localhost/pruebapagina/view/index.php');
+    exit();
 }

@@ -17,24 +17,23 @@ $footer = '../view/layouts/footer.php';
 
 <body>
     <header>
-        <?php include($header) ?>
     </header>
 
     <section id="register-page">
         <div class="container-xl">
             <div class="row">
                 <div class="col-lg-5 flex justify-center align-center">
-                    <img src="img/background-food-green.png" alt="">
+                    <img src="../assets/img/background-food-green.png" alt="">
                 </div>
 
                 <div class="col-lg-7 flex justify-center align-center">
                     <div class="form">
                         <div class="form-titulo">Inicia Sesión</div>
                         <div class="form-subtitulo">Entra a tu cuenta</div>
-                        <form action="../controllers/UsersController.php" method="POST" autocomplete="off">
+                        <form action="../controllers/accessController.php" method="POST" autocomplete="off">
                             <input type="hidden" name="_method" value="POST">
                             <div class="input-container">
-                                <input type="email" name="Login-email" placeholder="Correo Electronico" required>
+                                <input type="email" name="Login_email" placeholder="Correo Electronico" required>
                             </div>
                             <div class="input-container">
                                 <input type="password" placeholder="Contraseña" name="Login_contraseña" required>

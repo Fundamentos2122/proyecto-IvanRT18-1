@@ -4,19 +4,22 @@ class Usuario{
     private $_id_user;
     private $_nombre_user;
     private $_email_user;
-    private $_contraseña_user;
+    private $_password_user;
     private $_tipo_user;
-    private $_id_cita;
+    private $_photo;
+
+    // private $_id_cita;
 
 
-    public function __construct($_id_user, $_nombre_user, $_email_user, $_contraseña_user, $_tipo_user, $_id_cita)
+    public function __construct($_id_user, $_nombre_user, $_email_user, $_password_user, $_tipo_user, $photo)
     {
         $this->setId($_id_user);
         $this->setNombre($_nombre_user);
         $this->setEmail($_email_user);
-        $this->setPassword($_contraseña_user);
+        $this->setPassword($_password_user);
         $this->setTipo($_tipo_user);
-        $this->set_IdCita($_id_cita);
+        $this -> setPhoto($photo);
+        // $this->set_IdCita($_id_cita);
     }
 
     public function getId() {
@@ -44,11 +47,11 @@ class Usuario{
     }
 
     public function getPassword() {
-        return $this->_contraseña_user;
+        return $this->_password_user;
     }
 
     public function setPassword($password) {
-        $this->_contraseña_user = $password;
+        $this->_password_user = $password;
     }
 
     public function getTipo() {
@@ -67,15 +70,25 @@ class Usuario{
         $this->_id_cita = $id_cita;
     }
 
+    public function getPhoto() {
+        return $this -> _photo;
+    }
+
+    public function setPhoto($photo) {
+        $this -> _photo = base64_encode($photo);
+    }
+
     public function getArray() {
         $array = array();
 
         $array["id"] = $this->getId();
         $array["nombreUser"] = $this->getNombre();
         $array["emailUser"] = $this->getEmail();
-        $array["contraseñaUser"] = $this->getPassword();
+        $array["passwordUser"] = $this->getPassword();
         $array["tipoUser"] = $this->getTipo();
-        $array["idCitaUser"] = $this->get_idCita();
+        $array["photoUser"] = $this -> getPhoto();
+
+        // $array["idCitaUser"] = $this->get_idCita();
 
 
         return $array;

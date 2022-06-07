@@ -27,7 +27,7 @@ include('../controllers/UsersController.php');
         <div class="container-xl">
             <div class="row">
                 <div class="col-lg-5 flex justify-center align-center">
-                    <img src="img/background-food-green.png" alt="">
+                    <img src="../assets/img/background-food-green.png" alt="">
                 </div>
 
                 <div class="col-lg-7 flex justify-center align-center">

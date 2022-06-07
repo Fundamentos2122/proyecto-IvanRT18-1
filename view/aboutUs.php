@@ -1,3 +1,8 @@
+<?php
+$header = '../view/layouts/header.php';
+$footer = '../view/layouts/footer.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +11,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre nosotros | Body Balance</title>
-    <link rel="stylesheet" href="framework.css">
+    <link rel="stylesheet" href='../assets/css/framework.css'>
 </head>
 
 <body>
     <header>
-        <?php include('templates/header.php') ?>
+        <?php include($header) ?>
     </header>
 
     <section id="about-us-1">
@@ -45,7 +50,7 @@
                         tus objetivos.
                     </p>
                 </div>
-                <img src="img/background-food-green.png" alt="" width="300px">
+                <img src="../assets/img/background-food-green.png" alt="" width="300px">
             </div>
         </div>
     </section>
@@ -54,7 +59,7 @@
 
 </body>
 <footer id="footer">
-    <?php include('templates/footer.php') ?>
+    <?php include($footer) ?>
 </footer>
 
 </html>

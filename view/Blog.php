@@ -1,3 +1,13 @@
+<?php
+$header = '../view/layouts/header.php';
+$footer = '../view/layouts/footer.php';
+// include('../controllers/blogController.php');
+include('../view/layouts/modalEditaNoticia.php');
+include('../view/layouts/modalEliminarNoticia.php');
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,106 +16,139 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Body Balance</title>
-    <link rel="stylesheet" href="framework.css">
+    <link rel="stylesheet" href="../assets/css/framework.css">
 </head>
 
 <body>
     <header>
-        <?php include('templates/header.php') ?>
+        <?php include($header) ?>
     </header>
 
     <div class="container">
+        <div id="Registrar noticia">
+            
+        </div>
         <section class="entrada-1">
             <div class="row column align-center">
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <img src="img/background-food-green.png" alt="" width="300px">
-
-                <article class="articulo-blog">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptates natus explicabo molestiae
-                        quasi modi placeat praesentium, dolore debitis, numquam consectetur doloribus, non eius totam
-                        inventore omnis culpa quae consequuntur.
-                    </p>
-
-                    <h2 class="subtitulo-blog">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci,
-                        beatae.</h2>
-
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur earum illum possimus
-                        laborum
-                        recusandae eligendi quas sint harum laudantium excepturi porro esse quisquam, assumenda expedita
-                        aspernatur illo odit dolorem reiciendis ipsa praesentium maiores beatae exercitationem. Debitis
-                        quia
-                        perferendis minima dolore quas eum, alias sit nulla id praesentium aspernatur unde labore
-                        possimus
-                        similique aut voluptas veritatis error, suscipit adipisci commodi iure accusantium
-                        exercitationem.
-                        Esse saepe optio inventore repellat reiciendis laborum temporibus pariatur vel ipsa quod nobis,
-                        corporis cum vitae quo voluptatum nihil minima eum dolore laboriosam! Saepe obcaecati maiores
-                        distinctio quae, dignissimos quaerat aliquid hic delectus dicta corporis beatae nisi dolore!</p>
-
-                    <h2 class="subtitulo-blog">Lorem ipsum, dolor sit amet consectetur adipisicing.</h2>
-
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam molestias velit deleniti sunt
-                        nam
-                        ipsum, blanditiis veritatis libero ducimus nihil omnis placeat dolorum delectus cumque maxime
-                        atque
-                        optio eum itaque perspiciatis quaerat distinctio laboriosam. At, esse. Odio architecto quasi
-                        necessitatibus, unde soluta omnis dolore ducimus impedit at earum consequuntur fugiat a error
-                        vitae
-                        quis ut illo recusandae dolorem quidem sunt. Eum error dignissimos inventore fugit voluptates
-                        nobis,
-                        corrupti illum doloribus omnis sunt excepturi pariatur ratione debitis maxime quas quam sed
-                        impedit
-                        in non ipsum. Quis ducimus, error et necessitatibus atque nesciunt quidem culpa, nihil similique
-                        dolore amet voluptatibus ipsum officia eos sequi accusantium eligendi nulla voluptates adipisci?
-                        Eligendi alias qui aspernatur unde quo quisquam, reiciendis aperiam? Rem quia in incidunt vel
-                        error.
-                        Vitae, suscipit? Accusamus assumenda amet quibusdam a asperiores doloribus et placeat! Beatae
-                        voluptates cupiditate esse officiis rem, praesentium dolore dolorem, reprehenderit excepturi,
-                        cumque
-                        rerum mollitia consequuntur! Quaerat labore tenetur perferendis a ullam possimus commodi
-                        explicabo
-                        quod corrupti magni facilis debitis, fugiat voluptate? Quaerat, eveniet? Quod accusamus officiis
-                        minus tempore adipisci fugit unde iusto ratione ullam id dolorem neque nulla laborum ducimus
-                        obcaecati nemo odio temporibus voluptate, laudantium similique ad velit. Suscipit deleniti
-                        officia
-                        earum molestiae ullam odio facilis?
-                    </p>
-                </article>
+                <!-- <img src="../assets/img/Blog-1.png" alt="" width="300px"> -->
+                <div id="article-container">
+                </div>
             </div>
 
 
 
             <div class="container">
-                <h1>También te puede interesar:</h1>
-                <div class="blog-cards-container">
-                    <div class="blog-cards">
-                        <img src="img/background-food-green.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <section class="entrada-1">
+                    <div class="row column align-center">
+                        <!-- <h2>¿Qué pan es más saludable?</h2> -->
+                        <!-- <img src="../assets/img/Blog-1.png" alt="" width="300px"> -->
+
+                        <article class="articulo-blog">
+                        </article>
                     </div>
 
-                    <div class="blog-cards">
-                        <img src="img/background-food-green.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                    </div>
 
-                    <div class="blog-cards">
-                        <img src="img/background-food-green.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                    </div>
 
-                    <div class="blog-cards">
-                        <img src="img/background-food-green.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                    </div>
-                </div>
+                    <!-- <div class="container">
+                        <h1>También te puede interesar:</h1>
+                        <div class="blog-cards-container">
+                            <div class="blog-cards">
+                                <a href="../view/blog2.php"><img src="../assets/img/Blog-2.png" alt="" width="170px"></a>
+                                <p>La importación de la lista de compras</p>
+                            </div>
+
+                            <div class="blog-cards">
+                                <a href="../view/blog3.php"><img src="../assets/img/Blog-3.png" alt="" width="170px"></a>
+                                <p>¿Son buenos los hidratos de carbono?</p>
+                            </div>
+
+                            <div class="blog-cards">
+                                <a href="../view/blog4.php"><img src="../assets/img/Blog-4.png" alt="" width="170px"></a>
+                                <p>La importación de la lista de compras</p>
+                            </div>
+
+                            <div class="blog-cards">
+                                <a href="../view/Blog.php"><img src="../assets/img/Blog-1.png" alt="" width="170px"></a>
+                                <p>¿Qué pan es más saludable?</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </section>
             </div>
         </section>
     </div>
+    
 
 
 </body>
+
+<!-- <script src="../assets/js/blog.js"></script> -->
+<?php
+        //  session_start();
+        if($_SESSION["type"] === "admin") {//Si no es normal
+            echo  "<form action=\"../controllers/blogController.php\" method=\"POST\" id=\"form-noticia\" class=\"form\" >
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+
+                <label for=\"titulo\">Titulo:</label>
+                <input name=\"titulo\" autocomplete=\"off\" required></input>
+                <input type=\"hidden\" name=\"_method\" value=\"POST\">
+           
+                <label for=\"intro\">Introduccion:</label>
+                <textarea name=\"intro\" required></textarea>
+                <input type=\"hidden\" name=\"_method\" value=\"POST\">
+            
+            <label for=\"sub1\">Subtitulo 1:</label>
+            <input name=\"sub1\" autocomplete=\"off\" required></input>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+           
+            <label for=\"con1\">Contenido 1:</label>
+            <textarea name=\"con1\" required></textarea>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+           
+            <label for=\"sub2\">Subtitulo 2</label>
+            <input name=\"sub2\" autocomplete=\"off\" required></input>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+           
+            <label for=\"con2\">Contenido 2</label>
+            <textarea name=\"con2\" required></textarea>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+           
+            <label for=\"sub3\">Subtitulo 3</label>
+            <input name=\"sub3\" autocomplete=\"off\" required></input>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+           
+            <label for=\"con3\">Contenido 3</label>
+            <textarea name=\"con3\" required></textarea>
+            <input type=\"hidden\" name=\"_method\" value=\"POST\">
+            
+            
+            
+            <input type=\"submit\" class=\"btn btn-agenda\" value=\"Agregar\">
+</form>";                
+        }
+    ?>
+
+<?php
+
+// echo $_SESSION['type'];
+// var_dump($_SESSION);
+if ($_SESSION['type'] === 'user' || $_SESSION['type'] === NULL){
+    session_start();
+    // echo 'im here';
+    echo "<script src=\"../assets/js/blog.js\"></script>";
+}
+else if ($_SESSION['type'] === 'admin'){
+    session_start();
+    echo "<script src=\"../assets/js/blogAdmin.js\"></script>";
+    echo 'admin';
+}
+?>
+
 <footer id="footer">
-    <?php include('templates/footer.php') ?>
+    <?php include($footer) ?>
 </footer>
 
+
+<!-- <label for=\"image\">Imagen:</label>
+            <input type=\"file\" name=\"image\" required> -->
 </html>
